@@ -14,12 +14,11 @@
 %% src/ending.dtx  (with options: `htXourse')
 %% ------------:| ------------------------------------------------------------
 %%       ximera:| Simultaneously writing print and online interactive materials
-%%       Author:| Jim Fowler and Oscar Levin and Jason Nowell and Wim Obbels and Hans Parshall and Bart Snapp
+%%       Author:| Jim Fowler and Oscar Levin and Jason Nowell and Hans Parshall and Bart Snapp
 %%       E-mail:| bart.snapp@gmail.com
 %%      License:| Released under the LaTeX Project Public License v1.3c or later
 %%          See:| http://www.latex-project.org/lppl.txt
 %% 
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,10 +29,8 @@
 
 \Configure{@HEAD}{%
   \HCode{<meta name="og:image" content="}%
-\ifdefined\xourse@logo%
   \xourse@logo%
-\fi%
-\HCode{" />\Hnewline}}%
+  \HCode{" />\Hnewline}}
 
 
 
@@ -58,14 +55,13 @@
 \renewcommand\part[1]{%
 \stepcounter{ximera@part}%
 \ifvmode \IgnorePar\fi \EndP%
-%\HCode{<h1 id="part\arabic{ximera@part}" class="card part">#1</h1>}%
-\HCode{<h1 id="part\arabic{ximera@part}" class="card part">}#1\HCode{</h1>}%
+\HCode{<h1 id="part\arabic{ximera@part}" class="card part">#1</h1>}%
 \IgnoreIndent%
 }
 \renewenvironment{graded}[1]{%
 \ifvmode \IgnorePar\fi \EndP\HCode{<div class="graded" data-weight="#1">}\IgnoreIndent%
 }{
-\ifvmode \IgnorePar\fi \EndP\HCode{</div>}\IgnoreIndent%
+\ifvmode \IgnorePar\fi \EndP\HCode{</div>}}\IgnoreIndent%
 }
 \renewcommand\youtube[1]{%
 \ifvmode \IgnorePar\fi \EndP\HCode{<a class="youtube" href="https://www.youtube.com/watch?v=#1">#1</a>}\IgnoreIndent%
@@ -74,7 +70,7 @@
 \Hinput{xourse}
 
 %% 
-%% Copyright (C) 2024 by Bart Snapp <bart.snapp@gmail.com> and Jim Fowler <kisonecat@gmail.com>
+%% Copyright (C) 2018 by Bart Snapp <bart.snapp@gmail.com> and Jim Fowler <kisonecat@gmail.com>
 %% 
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License (LPPL), either
