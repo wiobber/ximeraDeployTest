@@ -21,9 +21,27 @@ This is verb
 
 \begin{example}[Ximera \LaTeX]
 \begin{verbatim}
-Here is more code
+\begin{sagesilent}
+    p2f1 = 3*x+1
+    p2ans = p2f1(x=4)
+\end{sagesilent}
+\begin{problem}
+Let $f(x) = \sage{p2f1}$. Then $f(4) = \answer{\sage{p2ans}}$
+\end{problem}
 \end{verbatim}
 \end{example}
+
+\begin{code}
+\begin{sagesilent}
+    p2f1 = 3*x+1
+    p2ans = p2f1(x=4)
+\end{sagesilent}
+\begin{problem}
+Let $f(x) = \sage{p2f1}$. Then $f(4) = \answer{\sage{p2ans}}$
+\end{problem} 
+\end{code}
+
+
 
 
 \begin{problem}
